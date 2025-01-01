@@ -1,0 +1,215 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden; /* Allow vertical scrolling but hide horizontal overflow */
+  }
+  
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(45deg, #ff0000, #000000);
+    animation: pulseBackground 3s infinite;
+    position: relative;
+  }
+  
+  .sale-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    animation: shake 2s infinite ease-in-out;
+  }
+  
+  .animated-hurry {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffff00;
+    margin-top: 20px;
+    text-shadow: 0 0 15px #ffff00, 0 0 30px #ffff00;
+    animation: blink 1s infinite alternate;
+  }
+  
+  .cta-button {
+    background: linear-gradient(to right, #ff0000, #ff9900);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+  }
+  
+  /* Timer Section */
+  .timer-section {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+  }
+  
+  .timer-title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .time-box {
+    text-align: center;
+    background: #222;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff0000;
+  }
+  
+  .time {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+  }
+  
+  /* Categories Section */
+  .categories {
+    text-align: center;
+    padding: 50px 20px;
+    background: #000;
+  }
+  
+  .categories h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #fff;
+  }
+  
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .category-item {
+    padding: 20px;
+    border-radius: 10px;
+    background: #222;
+    text-align: center;
+    animation: zoomIn 1.5s infinite alternate;
+    transition: transform 0.3s;
+  }
+  
+  .category-item h3 {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .category-item p {
+    font-size: 1.2rem;
+    color: #ff9900;
+  }
+  
+  .category-item:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Category-Specific Colors */
+  .clothing { background: #1a1a1a; }
+  .kitchen { background: #333333; }
+  .cars { background: #4d4d4d; }
+  .accessories { background: #666666; }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+    font-size: 0.9rem;
+    text-shadow: 0 0 5px #fff;
+  }
+
+  /* Black Friday Sticker */
+.black-friday-sticker {
+    position: fixed;
+    top: 20px;
+    right: -200px; /* Initially outside the screen */
+    width: 150px;
+    background: #ff0000;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    animation: slideIn 2s ease-out forwards; /* Animation for sliding in */
+  }
+  
+  .black-friday-sticker span {
+    display: block;
+    transform: rotate(-10deg);
+    text-shadow: 0 0 5px #fff;
+  }
+  
+  /* Slide-In Animation */
+  @keyframes slideIn {
+    0% {
+      right: -200px; /* Start off-screen */
+      transform: rotate(0deg);
+    }
+    50% {
+      right: 20px; /* Slight overshoot */
+      transform: rotate(10deg);
+    }
+    100% {
+      right: 10px; /* Settle in place */
+      transform: rotate(0deg);
+    }
+  }
+  
+  
+  /* Animations */
+  @keyframes pulseBackground {
+    0% { background: linear-gradient(45deg, #ff0000, #000000); }
+    50% { background: linear-gradient(45deg, #ff6600, #330000); }
+    100% { background: linear-gradient(45deg, #ff0000, #000000); }
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes zoomIn {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+  }
+  
+  
